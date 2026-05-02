@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merit List - ABC College</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">ABC College</h1>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="admission.html">Admission</a></li>
+                    <li><a href="cutoff.html">Cutoff</a></li>
+                    <li><a href="merit.html">Merit</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="merit-section">
+            <div class="container">
+                <h2>Merit List</h2>
+                <p class="merit-description">Students who have met the cutoff criteria for their selected course and category.</p>
+
+                <div class="merit-stats">
+                    <div class="stat-card">
+                        <h3 id="totalStudents">0</h3>
+                        <p>Total Applications</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="selectedStudents">0</h3>
+                        <p>Selected Students</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="rejectionRate">0%</h3>
+                        <p>Rejection Rate</p>
+                    </div>
+                </div>
+
+                <div class="merit-list-container">
+                    <table class="merit-table" id="meritTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Course</th>
+                                <th>Category</th>
+                                <th>Marks</th>
+                                <th>Cutoff</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="meritTableBody">
+                            <!-- Merit list will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="noDataMessage" class="no-data-message" style="display: none;">
+                    <p>No student applications found. Please check back later or visit the admission page to submit applications.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ABC College. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

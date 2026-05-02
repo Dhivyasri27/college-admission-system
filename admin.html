@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - ABC College</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">ABC College</h1>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="admission.html">Admission</a></li>
+                    <li><a href="cutoff.html">Cutoff</a></li>
+                    <li><a href="merit.html">Merit</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="admin-section">
+            <div class="container">
+                <h2>Admin Panel</h2>
+
+                <!-- Login Section -->
+                <div id="loginSection" class="login-section">
+                    <div class="form-card">
+                        <h3>Admin Login</h3>
+                        <form id="loginForm" class="admin-form">
+                            <div class="form-group">
+                                <label for="adminName">Admin Name:</label>
+                                <input type="text" id="adminName" name="adminName" placeholder="Enter your name" required>
+                            </div>
+                            <button type="submit" class="btn">Login</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Admin Dashboard (Hidden initially) -->
+                <div id="adminDashboard" class="admin-dashboard" style="display: none;">
+                    <div class="welcome-admin">
+                        <h3>Welcome, <span id="adminWelcomeName"></span>!</h3>
+                        <p>You are now logged in as administrator.</p>
+                    </div>
+
+                    <!-- Cutoff Calculation Section -->
+                    <div class="form-card">
+                        <h3>Cutoff Calculation</h3>
+                        <p class="formula-info">Formula: Cutoff = (Maths ÷ 2) + (Physics ÷ 4) + (Chemistry ÷ 4)</p>
+
+                        <form id="cutoffCalculationForm" class="admin-form">
+                            <div class="marks-inputs">
+                                <div class="form-group">
+                                    <label for="mathsMarks">Maths Marks:</label>
+                                    <input type="number" id="mathsMarks" name="mathsMarks" placeholder="Enter maths marks" min="0" max="100" step="0.01" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="physicsMarks">Physics Marks:</label>
+                                    <input type="number" id="physicsMarks" name="physicsMarks" placeholder="Enter physics marks" min="0" max="100" step="0.01" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="chemistryMarks">Chemistry Marks:</label>
+                                    <input type="number" id="chemistryMarks" name="chemistryMarks" placeholder="Enter chemistry marks" min="0" max="100" step="0.01" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn">Calculate Cutoff</button>
+                        </form>
+
+                        <!-- Result Display -->
+                        <div id="cutoffResult" class="cutoff-result" style="display: none;">
+                            <h4>Calculated Cutoff:</h4>
+                            <div class="result-value" id="cutoffValue"></div>
+                        </div>
+                    </div>
+
+                    <!-- Logout Button -->
+                    <div class="logout-section">
+                        <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ABC College. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
