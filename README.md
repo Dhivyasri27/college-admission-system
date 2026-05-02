@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # College Admission Management System
 
 A comprehensive web-based college admission management system built with HTML, CSS, and JavaScript.
